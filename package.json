@@ -1,0 +1,15 @@
+{
+  "name": "magnetengine-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MagnetEngine server: finder ingest, lead review, Haiku scoring and drafting, warm-up and task scheduling for the MagnetEngine Chrome extension.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning test/run.js && node --disable-warning=ExperimentalWarning test/ui.js",
+    "test:extension": "EXT_DIR=../magnetengine-extension/ node --disable-warning=ExperimentalWarning test/e2e-extension.js"
+  }
+}
