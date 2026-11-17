@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-size="m" data-contrast="off">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MagnetEngine</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div id="live" class="sr-only" role="status" aria-live="polite"></div>
+
+<section id="login" class="login" hidden aria-labelledby="loginTitle">
+  <h1 id="loginTitle">MagnetEngine</h1>
+  <form id="loginForm" novalidate>
+    <label for="pw">Password</label>
+    <input id="pw" type="password" autocomplete="current-password" aria-describedby="loginMsg">
+    <button type="submit">Sign in</button>
+    <p id="loginMsg" class="msg" role="alert"></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="top">
+    <h1>MagnetEngine</h1>
+    <nav aria-label="Main"><ul id="nav" class="nav"></ul></nav>
+    <div class="tools">
+      <label for="size">Text size</label>
+      <select id="size"><option value="m">Normal</option><option value="l">Large</option><option value="xl">Extra large</option></select>
+      <label class="check"><input type="checkbox" id="contrast"> High contrast</label>
+      <button type="button" id="signout" class="quiet">Sign out</button>
+    </div>
+  </header>
+  <p id="flash" class="flash" role="alert" hidden></p>
+  <main id="main" tabindex="-1"></main>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
